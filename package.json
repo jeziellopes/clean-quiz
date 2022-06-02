@@ -11,18 +11,24 @@
     "clean architecture"
   ],
   "scripts": {
-    "build": "yarn tsc",
-    "start": "node ./dist/server.js",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    "start": "yarn build && node ./dist/main/server.js",
     "start:local": "yarn build && yarn start",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch --no-notify src/main/server.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "yarn lint --fix"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.36",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^8.16.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
