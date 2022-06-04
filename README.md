@@ -34,3 +34,14 @@
 ```shell
   yarn dev
 ```
+
+---
+## Important
+
+- In order to prevent ```CORS``` errors, run ```API Requests``` only from allowed origins or change ```allowedOrigins``` inside ```@main/config/cors```
+
+```js
+const allowedOrigins = ['http://localhost:3000']
+```
+
+
