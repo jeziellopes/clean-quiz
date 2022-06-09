@@ -11,28 +11,40 @@
 
 ## Functional Requirements
 
-- One endpoint that receive quizId and return a list with [mock questions](https://gist.githubusercontent.com/levismad/655fb5f6f6b11c4b603f1ae4e94e1632/raw/31473a7774bb0836dc3fc81aca9bfbd09b949d09/questions.json)
+- One endpoint that receive quizId and return a list with [mock questions](https://raw.githubusercontent.com/jeziellopes/clean-quiz/develop/src/infra/datasources/questions.json):
+
+```json
+[
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What was the name of the hero in the 80s animated video game 'Dragon's Lair'?",
+    "correct_answer": "Dirk the Daring",
+    "incorrect_answers": ["Arthur", "Sir Toby Belch", "Guy of Gisbourne"]
+  },
+  ...
+]
+```
 
 ---
 
-## How to use
+## How to start locally
 
-### Install dependencies:
+```js
 
-```shell
+  /** Install dependencies **/
   yarn
-```
 
-### Change to develop branch:
-
-```shell
+  /** Change to develop branch **/
   git checkout develop
-```
 
-### Start development server:
+  /** Generate .env **/
+  yarn env:copy
 
-```shell
+  /** Start development server **/
   yarn dev
+
 ```
 
 ---

@@ -16,7 +16,8 @@
     "start:local": "yarn build && yarn start",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch --no-notify src/main/server.ts",
     "lint": "eslint . --ext .ts",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "env:copy": "cp .sample.env .env"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
