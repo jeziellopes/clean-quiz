@@ -1,5 +1,5 @@
-import { options } from '@main/config/cors'
-import { setupRoutes } from '@main/config/routes'
+import { options } from '@main/config'
+import { setupRoutes } from '@main/config/routes.config'
 import { log } from '@main/middlewares'
 import cors from 'cors'
 import express from 'express'

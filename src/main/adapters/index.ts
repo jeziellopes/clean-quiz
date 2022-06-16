@@ -1,1 +1,1 @@
-export * from '@main/adapters/express-router'
+export * from '@main/adapters/express-router.adapter'
