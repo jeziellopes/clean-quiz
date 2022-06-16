@@ -1,1 +1,1 @@
-export * from '@main/middlewares/log'
+export * from '@main/middlewares/log.middleware'
