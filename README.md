@@ -1,6 +1,6 @@
 # ✨ Clean Quiz ✨
 
-**Clean Quiz** is a **Nodejs/Express** API with **TypeScript** and **ESLint** applying concepts from **Clean Architecture** by Robert C. Martin.
+**Clean Quiz** is a **Nodejs/Express** API with **TypeScript**, **ESLint** and _Jest Test Coverage_ applying concepts from **Clean Architecture** by Robert C. Martin.
 
 ---
 
@@ -31,26 +31,37 @@
 
 ## How to start locally
 
-```js
-
-  /** Install dependencies **/
+```bash
+  # Install dependencies
   yarn
 
-  /** Change to develop branch **/
+  # Change to develop branch
   git checkout develop
 
-  /** Generate .env **/
+  # Generate .env
   yarn env:copy
 
-  /** Start development server **/
+  # Start development server
   yarn dev
-
 ```
+---
 
+## How to test locally
+
+```bash
+  # Run tests once
+  yarn test
+
+  # Run and watch tests
+  yarn test:watch
+
+  # Run and watch tests coverage
+  yarn test:cov
+```
 ---
 ## Important
 
-- In order to prevent ```CORS``` errors, run ```API Requests``` only from allowed origins or change ```allowedOrigins``` inside ```@main/config/cors```
+- In order to prevent ```CORS``` errors, run ```API Requests``` only from allowed origins or change ```allowedOrigins``` inside ```@main/config/cors.config.ts```
 
 ```js
 const allowedOrigins = ['http://localhost:3000']
